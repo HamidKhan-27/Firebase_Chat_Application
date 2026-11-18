@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat Application</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <link rel="stylesheet" href="../CSS/auth.css" />
+  </head>
+  <body>
+    <main class="auth-container">
+      <div class="auth-wraper">
+        <!-- Left Branding Section -->
+        <section class="branding-section">
+          <div class="brand-content">
+            <!-- Logo and app name -->
+            <div class="brand-logo">
+              <img
+                src="../Assessts/Gemini_Generated_Image_793nbz793nbz793n-removebg-preview.png"
+                alt="HamidChat Logo"
+                class="logo-image"
+              />
+            </div>
+            <!-- Welcome Text -->
+            <div class="welcome-content">
+              <h2>Welcome <span>Let's Get Started</span></h2>
+              <p>Connect, Share & Chat in Real Time.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Right Authentication Section -->
+        <section class="auth-section">
+          <div class="auth-card">
+            <!-- Login / Signup Tabs -->
+            <div class="auth-tabs">
+              <button type="button" id="loginTab" class="tab-btn">Login</button>
+              <button type="button" id="signupTab" class="tab-btn active">
+                Signup
+              </button>
+            </div>
+
+            <!-- Login Form -->
+            <form id="loginForm" class="auth-form hidden">
+              <div class="form-heading">
+                <h2>Welcome Back!</h2>
+                <p>Login to continue your conversations.</p>
+              </div>
+              <div class="form-group">
+                <label for="loginEmail">Email Address</label>
+                <input
+                  type="email"
+                  id="loginEmail"
+                  placeholder="Enter your email"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="loginPasseord">Password</label>
+                <input
+                  type="password"
+                  id="loginPassword"
+                  placeholder="Enter your password"
+                  autocomplete="current-password"
+                  required
+                />
+              </div>
+              <button type="submit" class="submit-btn">
+                Login <span>→</span>
+              </button>
+
+              <p class="switch-text">
+                Don't have an account?
+                <button type="button" id="showSignup">Sign Up</button>
+              </p>
+            </form>
+
+            <!-- Signup Form -->
+            <form id="signupForm" class="auth-form">
+              <div class="form-heading">
+                <h2>Create Account</h2>
+                <p>Join us and start your journey.</p>
+              </div>
+
+              <div class="form-group">
+                <label for="signupName"> Full Name </label>
+                <input
+                  type="text"
+                  id="signupName"
+                  placeholder="Enter your full name"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="signupEmail">Email Address</label>
+                <input
+                  type="email"
+                  id="signupEmail"
+                  placeholder="Enter your email"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="signupPassword"> Password</label>
+                <input
+                  type="password"
+                  id="signupPassword"
+                  placeholder="Create a password"
+                  autocomplete="new-password"
+                  minlength="6"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input
+                  type="password"
+                  id="confirmPassword"
+                  placeholder="Confirm your password"
+                  autocomplete="new-password"
+                  minlength="6"
+                  required
+                />
+              </div>
+
+              <button type="submit" class="submit-btn">
+                Create Account <span>→</span>
+              </button>
+
+              <p class="switch-text">
+                Already have an account?
+                <button type="button" id="showLogin">Login</button>
+              </p>
+            </form>
+
+            <!-- Success / Error Message -->
+            <div
+              id="authMessage"
+              class="auth-message"
+              role="status"
+              aria-live="polite"
+            ></div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- JavaScript -->
+    <script type="module" src="../JAVASCRIPT/auth.js"></script>
+  </body>
+</html>

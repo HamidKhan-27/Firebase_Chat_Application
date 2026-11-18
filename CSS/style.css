@@ -1,0 +1,105 @@
+/* Universal Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Brands colors */
+  --primary-color: "#244bff";
+  --secondary-color: "#00c6d7";
+  --accent-color: "#19d8e8";
+
+  /* Gradient Colors */
+  --primary-gradient: linear-gradient(120deg, #4938ff, #00c6d7);
+
+  --brand-gradient: linear-gradient(135deg, #062b68, #087fad, #00c6d7);
+
+  /* Background Colors */
+  --background-color: "#f4f7ff";
+  --card-background: "#ffffff";
+  --input-baclground: "#f1f5ff";
+
+  /* Text Colors */
+  --heading-color: "#10265b";
+  --text-color: "#53658d";
+  --white-color: "#ffffff";
+
+  /* Borders */
+  --border-color: "#dce5fa";
+  --border-radius: "12px";
+
+  /* Shadows */
+  --card-shadow: 0 12px 40px rgba(20, 48, 110, 0.12);
+  --input-shadow: 0 2px 8px rgba(25, 65, 130, 0.05);
+
+  /* typography */
+  --font-faimly: "segoe UI", Arial, sans-serif;
+
+  /* Transitions */
+  --transition: all 0.3s ease;
+}
+
+/* HTML & Body */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--font-faimly);
+  background-color: var(--background-color);
+  color: var(--heading-color);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* images */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Buttons */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* Inputs */
+input {
+  font-family: inherit;
+  outline: none;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Hidden Element */
+.hidden {
+  display: none !important;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+}
+
+/* Srollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbabr-track {
+  background: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 10px;
+}
