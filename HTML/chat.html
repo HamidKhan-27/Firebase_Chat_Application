@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat Application</title>
+    <link rel="stylesheet" href="../CSS/chat.css" />
+  </head>
+  <body>
+    <div class="chat-container">
+      <!-- Top Header -->
+      <header class="chat-header">
+        <div class="logo-section">
+          <img src="../Assessts/chat-logo.png" alt="ChatApp Logo" />
+          <h2>ChatApp</h2>
+        </div>
+
+        <div class="header-actions">
+          <span class="onlin-status">
+            <span class="status-dot"></span>
+            Online
+          </span>
+
+          <button id="logoutBtn" class="logout-btn">Logout</button>
+        </div>
+      </header>
+
+      <!-- Main Chat Layout -->
+      <div class="chat-main">
+        <!-- Users Sidebar -->
+        <aside class="users-sidebar">
+          <div class="users-heading">
+            <h3>All Users</h3>
+            <span id="usersCount">(0)</span>
+          </div>
+
+          <div class="users-list" id="usersList">
+            <p class="loading-text">Loading users...</p>
+          </div>
+
+          <div class="sidebar-footer">
+            <h3>ChatApp</h3>
+            <p>Stay Connected 💙</p>
+          </div>
+        </aside>
+
+        <!-- Chat Section -->
+        <main class="chat-section">
+          <!-- Selected User Header -->
+          <div class="selected-user-header" id="selectedUserHeader">
+            <div>
+              <h3>Select a user</h3>
+              <p>Start Your conversation</p>
+            </div>
+          </div>
+
+          <!-- Messages -->
+
+          <!-- Messages Area -->
+          <div class="messages-container" id="messagesContainer">
+            <div class="welcome-screen" id="welcomeScreen">
+              <div class="welcome-icon">
+                <i class="welcome-symbol">💬</i>
+              </div>
+
+              <h2>Welcome to ChatApp!</h2>
+
+              <p>
+                Connect with your friends and start meaningful conversations in
+                real time.
+              </p>
+
+              <div class="welcome-instruction">
+                <span>👥</span>
+                <div>
+                  <h4>Select a user from the sidebar</h4>
+                  <p>Choose someone to start chatting.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Message Input -->
+          <form class="message-form hidden" id="messageForm">
+            <input
+              type="text"
+              id="messageInput"
+              placeholder="Type your message..."
+              autocomplete="off"
+              disabled
+            />
+
+            <button type="submit" id="sendBtn" disabled>Send</button>
+          </form>
+        </main>
+      </div>
+    </div>
+
+    <script type="module" src="../JAVASCRIPT/chat.js"></script>
+  </body>
+</html>

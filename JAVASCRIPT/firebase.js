@@ -1,6 +1,9 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/13.4.0/firebase-app.js";
-import { getAuth } from "https://www.gstatic.com/firebasejs/13.4.0/firebase-auth.js"; // import { getAnalytics } from "https://www.gstatic.com/firebasejs/13.4.0/firebase-analytics.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/13.4.0/firebase-auth.js";
+import { getDatabase } from "https://www.gstatic.com/firebasejs/13.4.0/firebase-database.js";
+
+// import { getAnalytics } from "https://www.gstatic.com/firebasejs/13.4.0/firebase-analytics.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -9,6 +12,8 @@ import { getAuth } from "https://www.gstatic.com/firebasejs/13.4.0/firebase-auth
 const firebaseConfig = {
   apiKey: "AIzaSyDtaiqBS3R2GcHaIMCfnANRwGy9XaOiEdY",
   authDomain: "fir-chat-application-28304.firebaseapp.com",
+  databaseURL:
+    "https://fir-chat-application-28304-default-rtdb.firebaseio.com/",
   projectId: "fir-chat-application-28304",
   storageBucket: "fir-chat-application-28304.firebasestorage.app",
   messagingSenderId: "200163602466",
@@ -20,4 +25,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 // const analytics = getAnalytics(app);
 export const auth = getAuth(app);
+export const database = getDatabase(app);
+
 console.log("firebase initialized Successgully!");
