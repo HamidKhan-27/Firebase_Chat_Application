@@ -431,3 +431,57 @@ input {
   color: var(--text-secondary);
   font-size: 13px;
 }
+
+.user-card.active {
+  background: var(--accent-color);
+  border-color: var(--accent-secondary);
+  box-shadow: var(--soft-shadow);
+}
+
+.user-card.active h4 {
+  color: var(--text-light);
+}
+
+/* Individual message */
+.message {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  max-width: 70%;
+  padding: 12px 16px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  overflow-wrap: anywhere;
+}
+
+/* Current user's messages */
+.message.sent {
+  margin-left: auto;
+  background: var(--primary-color);
+  color: white;
+  border-bottom-right-radius: 3px;
+}
+
+/* Other user's messages */
+.meesage.received {
+  margin-right: auto;
+  background: white;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-bottom-left-radius: 3px;
+}
+
+/* Message text */
+.meesage-text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* message time */
+.message-time {
+  align-self: flex-end;
+  margin-top: 5px;
+  font-size: 10px;
+  opacity: 0.75;
+}
